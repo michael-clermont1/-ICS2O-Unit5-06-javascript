@@ -1,17 +1,18 @@
 function myFunction() {
-      var age, day;
+      var age;
+      var realAge=14;
 
       
       age = document.getElementById("age").value;
     
-        if (age==13) {
+        if (age == realAge) {
             age = "You guessed my age correct.";
-               } else if (age<13) {
-            age = "You guessed too small, please try again.";
-        } else if (age>13) {
-            age = "You guessed too big, please try again.";
+               } else if (age < realAge) {
+            age = "You guessed (" + age + ") that is too small, please try again.";
+        } else if (age > realAge) {
+            age = "You guessed (" + age + ") that is too big, please try again.";
         } else {
-            age = "Invalid answer. Please try again.";
+            age = "Invalid data entry. Please a positive number and try again.";
         }
     document.getElementById("demo").innerHTML = age;
 }
